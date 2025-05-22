@@ -2,8 +2,8 @@ import importlib
 import bonsai_ml
 
 if __name__ == "__main__":
-    df_pq = pd.read_csv('dataset/penguins/penguins_train.csv')
-    df_pq_test = pd.read_csv('dataset/penguins/penguins_test.csv')
+    df_pq = pd.read_csv('dataset/penguin/penguin_train.csv')
+    df_pq_test = pd.read_csv('dataset/penguin/penguin_test.csv')
     attributes = {}
     attributes['Decision'] = 'Output'
     attributes['island'] = 'Categorical'
