@@ -81,5 +81,5 @@ class DecisionTree:
             raise PredictionHandlerNotFound("Fit the decision tree before predicting.")
         return self.prediction_handler.predict(data_input, self.get_root_node())
 
-    def set_prediction_handler(self, prediciton_handler: PredictionHandler):
-        self.prediction_handler = prediciton_handler
+    def set_prediction_handler(self, prediction_handler: PredictionHandler):
+        self.prediction_handler = prediction_handler
