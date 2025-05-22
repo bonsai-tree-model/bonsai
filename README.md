@@ -21,3 +21,8 @@ BONSAI is distributed as a Python package. To install:
 
 ```bash
 pip install bonsai-ml
+```
+
+For a detailed walkthrough of the repository, including how to run the
+examples and tests, see [FIRST_TIME_USERS.md](FIRST_TIME_USERS.md).
+
