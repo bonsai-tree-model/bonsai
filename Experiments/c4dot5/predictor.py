@@ -18,13 +18,15 @@ class PredictionHandler:
 
     def _predict(self, row_input: pd.Series, node: Node):
         if node is None:
-            breakpoint()
+            raise ValueError("Prediction reached a null node")
         attribute = node.get_attribute().split(":")[0]
         # in case of unknown variable more the data are passed to all children
         childs = select_children_for_prediction(row_input[attribute], node)
         for child in childs:
             if child is None:
-                breakpoint()
+                raise ValueError(
+                    "Prediction encountered an unexpected null child node"
+                )
             if isinstance(child, LeafNode):
                 self._predictions_dict[child.get_label()] = child.get_classes()
             else:
