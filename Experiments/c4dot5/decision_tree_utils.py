@@ -11,9 +11,9 @@ def extract_rules_from_leaf(node):
     return rules
 
 def get_total_threshold(data, local_threshold) -> float:
-    """ Computes the threshold on the total dataset
+    """Computes the threshold on the total dataset
 
-    The global threshold is the maximum number less then or equal to the local one
+    The global threshold is the maximum number less **than** or equal to the local one
     """
     data = data[data != '?'].astype(float)
     return data[data.le(local_threshold)].max()
